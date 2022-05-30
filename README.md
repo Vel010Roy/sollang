@@ -1,2 +1,0 @@
-# sollang
-for mvp
