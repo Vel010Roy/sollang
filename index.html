@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-</head>
-<body>
-    <div id="root"></div>
-</body>
-<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-<script type="text/babel">
-    function Btn({ text, onClick}) {
-        return <button 
-        onClick = {onClick}
-            style={{
-                backgroundColor:"tomato",
-                color:"white",
-                padding:"10px 20px",
-                border : 0,
-                borderRadius:10,
-            }}
-        >{text}</button>;
-    } 
-    const MemorizedBtn = React.memo(Btn)
-    function App() {
-        const [value1, setValue1] = React.useState("Change Human Affairs");
-        const [value2, setValue2] = React.useState("Drastic Super Guild");
-        const changeValue1 = () => setValue1("DSG");
-        const changeValue2 = () => setValue2("DSG");
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" />
+    <title>Switter</title>
 
-        return (
+</head>
+
+<body>
+    <section class="input_section">
+        <ul>
+            <h1>하나씩 넣기 </h1>
             <div>
-                
-                <Btn text={value1} onClick = {changeValue1} />
-                <Btn text={value2} onClick = {changeValue2} />
+                <label for="name">업체명:
+                    <input type="text" id="name" required size="10">
+                </label><br>
+                <label for="address">주소:
+                    <input type="text" id="address" required size="10">
+                </label><br>
+                <label for="callNum">업체번호:
+                    <input type="text" id="callNum" required size="10">
+                </label><br>
+                <label for="openHour">오픈시간:
+                    <input type="text" id="openHour" required size="10">
+                </label><br>
+                <label for="closeHour">마감시간:
+                    <input type="text" id="closeHour" required size="10">
+                </label><br>
+                <label for="price">가격:
+                    <input type="text" id="price" required size="10">
+                </label>
             </div>
-        )
-    }
-    const root = document.getElementById("root");
-    ReactDOM.render(<App />, root);
-</script>
+            <button>입력</button>
+        </ul>
+        <ul>
+            <h2>파일로 넣기</h2>
+            <div>
+            </div>
+        </ul>
+
+    </section>
+</body>
+
 </html>
