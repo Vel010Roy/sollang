@@ -1,0 +1,27 @@
+:root{
+    /*Color*/
+    --white-color: #fff;
+    /*Size*/
+    --padding: 10px;
+    --padding2: 20px;
+    --avatar-size: 35px;
+    /*FontSize*/
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px
+}
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Roboto;
+}
+
+.input_section{
+    text-align: center;
+    padding: var(--padding);
+}
